@@ -10,20 +10,27 @@
 
 <body>
   <div class="flex-column justify-space-around">
-    <header class="display-flex justify-space-between align-center p-2">
-      <h1>
-        <a href="/">Project 2</a>
-      </h1>
-      <nav>
-        <!-- Conditionally render login or logout links -->
-        {{#if logged_in}}
-        <a href="/profile">profile</a> |
-        <button class="btn btn-primary" id="logout">logout</button>
-        {{else}}
-        <a href="/login">login</a>
-        {{/if}}
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark .bg-gradient class">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">🐑⚡ Electric Sheep</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <!-- Conditionally render login or logout links -->
+            {{#if logged_in}}
+            <a href="/profile">profile</a> |
+            <button class="btn btn-primary" id="logout">Log Out</button>
+            {{else}}
+            <a class="nav-link" href="/login">Log In</a>
+            {{/if}}
+        </div>
       </nav>
-    </header>
+    {{!-- </header> --}}
     <main class="container container-fluid mt-5">
       <!-- Render the sub layout -->
       {{{ body }}}
