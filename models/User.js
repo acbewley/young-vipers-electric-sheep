@@ -8,10 +8,6 @@ class User extends Model {
   }
 }
 
-//CHANGE THIS MODEL.
-//Do you want to track your users by first name AND last name?
-//Do you want a username column in addition to email?
-//Is there anything else about your user your application requires you to keep track of?
 User.init(
   {
     id: {
@@ -20,7 +16,19 @@ User.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    name: {
+    first_name: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    last_name: {
+      type: DataTypes.STRING,
+      allowNull: true
+    },
+    sign: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    user_name: {
       type: DataTypes.STRING,
       allowNull: false,
     },
