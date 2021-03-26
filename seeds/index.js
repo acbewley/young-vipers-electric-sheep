@@ -1,16 +1,20 @@
-const seedUsers = require('./userSeeds')
-const seedDreams = require('./dreamSeeds')
-
 const sequelize = require('../config/connection')
+const { User, Dream } = require('../models')
+
+const userData = require('./userSeeds.json')
+const dreamData = require('./dreamSeeds.json')
 
 const seedAll = async () => {
     await sequelize.sync({ force: true });
-    console.log('\nDATABASE SEEDED\n')
-    await seedUsers();
-    console.log('\nUSERS SEEDED\n');
-    await seedDreams();
-    console.log('\nDREAMS SEEDED\n');
+
+    await User.bulkCreate(userData, {
+        individualHooks: true,
+        returning: true
+    });
+
+    await Dream.bulkCreate(dreamData);
+
     process.exit(0);
-};
+}
 
 seedAll();
