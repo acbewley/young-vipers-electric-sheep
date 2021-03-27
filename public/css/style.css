@@ -27,10 +27,27 @@ h2 {
 }
 
 .sign-up-button {
-    margin-top: 10px;
+    margin-top: 15px;
     margin-bottom: 10px;
 }
 
 .name-signup {
+    margin-top: 10px;
+}
+
+.signup-form {
+    margin-top: 10px;
+}
+
+.dropdowns {
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.day {
+    margin-top: 10px;
+}
+
+.month {
     margin-top: 10px;
 }
