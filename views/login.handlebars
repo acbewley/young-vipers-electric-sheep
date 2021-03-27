@@ -9,44 +9,27 @@
   <link rel="stylesheet" href="/css/style.css">
 </head>
 <div class="row">
-  <div class="col-md-6">
-    <h2>Login</h2>
+  <div class="col-sm-6">
+    <h2>Log In</h2>
 
-    <form class="form login-form">
+    <form>
       <div class="form-group">
         <label for="email-login">email:</label>
-        <input class="form-input" type="text" id="email-login" />
+        <input class="form-control" type="email" id="email-login" placeholder="example@mail.com"/>
       </div>
       <div class="form-group">
         <label for="password-login">password:</label>
-        <input class="form-input" type="password" id="password-login" />
+        <input class="form-control" type="password" id="password-login" />
       </div>
       <div class="form-group">
-        <button class="btn btn-primary" type="submit">login</button>
+        <button class="btn btn-primary mt-2 mb-2" type="submit">submit</button>
       </div>
     </form>
   </div>
-  <div class="col-md-6">
-    <h2>Signup</h2>
 
-    <form class="form signup-form">
-      <div class="form-group">
-        <label for="name-signup">name:</label>
-        <input class="form-input" type="text" id="name-signup" />
-      </div>
-      <div class="form-group">
-        <label for="email-signup">email:</label>
-        <input class="form-input" type="text" id="email-signup" />
-      </div>
-      <div class="form-group">
-        <label for="password-signup">password:</label>
-        <input class="form-input" type="password" id="password-signup" />
-      </div>
-      <div class="form-group">
-        <button class="btn btn-primary" type="submit">signup</button>
-      </div>
-    </form>
-  </div>
+<!-- The Link To Sign Up Page -- Does Not Work Yet -->
+<div class="col-sm-6 sign-up-link align="center">
+<h4>...Or sign up for an account <a href="/signup">here!</a></h4>
 </div>
 
 <script src="./js/login.js"></script>
