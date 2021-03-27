@@ -2,6 +2,13 @@
     {
         "subject": "My WILD Dream",
         "body": "I had a dream that I fell lmao.",
+        "is_nightmare": true,
+        "user_id": 1
+    },
+    {
+        "subject": "my chill dream",
+        "body": "I dreamt that I was listening to chill beats to relax/study to",
+        "is_nightmare": false,
         "user_id": 1
     }
 ]
