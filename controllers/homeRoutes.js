@@ -36,18 +36,13 @@ router.get("/profile", withAuth, async (req, res) => {
 
     const user = userData.get({ plain: true });
     const sign = zodiac.getSignByDate({ day: userData.day, month: userData.month })
-    let dreams = []
-
-    for (i = 0; i < dreamData.length; i++) {
-      const aDream = dreamData[i].get({ plain: true })
-      dreams.push(aDream)
-    }
-    console.log(dreams)
+    const dreams = dreamData.map((dream) => dream.get({ plain: true }));
+    
     res.render("profile", {
       ...user,
       logged_in: true,
       ...sign,
-      ...dreams
+      dreams
     });
   } catch (err) {
     res.status(500).json(err);
