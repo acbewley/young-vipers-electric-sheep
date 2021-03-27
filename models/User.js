@@ -24,8 +24,12 @@ User.init(
       type: DataTypes.STRING,
       allowNull: true
     },
-    sign: {
-      type: DataTypes.STRING,
+    day: {
+      type: DataTypes.INTEGER(31),
+      allowNull: false
+    },
+    month: {
+      type: DataTypes.INTEGER(12),
       allowNull: false
     },
     user_name: {
