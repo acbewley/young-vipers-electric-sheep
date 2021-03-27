@@ -1,5 +1,8 @@
 <div class="row">
   <div class="col-auto">
     <h2>Welcome, {{user_name}}!</h2>
+    {{#each dreams as |dream|}}
+    <p>{{dream.body}}</p>
+    {{/each}}
   </div>
 </div>
