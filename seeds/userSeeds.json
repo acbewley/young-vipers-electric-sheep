@@ -2,7 +2,8 @@
     {
         "first_name": "Oliver",
         "last_name": "Bewley",
-        "sign": "Taurus",
+        "day": 13,
+        "month": 5,
         "user_name": "acbewley",
         "email": "acbewley13@gmail.com",
         "password": "test1234"

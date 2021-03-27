@@ -1,6 +1,7 @@
 const router = require("express").Router();
 const { User } = require("../models");
 const withAuth = require("../utils/auth");
+const zodiac = require('zodiac-signs')();
 
 router.get("/", async (req, res) => {
   try {
@@ -19,10 +20,12 @@ router.get("/profile", withAuth, async (req, res) => {
     });
 
     const user = userData.get({ plain: true });
+    const sign = zodiac.getSignByDate({ day: userData.day, month: userData.month })
 
     res.render("profile", {
       ...user,
       logged_in: true,
+      ...sign
     });
   } catch (err) {
     res.status(500).json(err);
