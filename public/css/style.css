@@ -1,7 +1,6 @@
 .dream-button {
     padding-top: 5px;
     border-right: 1px solid black;
-
 }
 
 main {
@@ -25,4 +24,13 @@ h2 {
     margin-top: 10px;
     font-weight: bold;
     border-left: 1px solid lightgray;
+}
+
+.sign-up-button {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.name-signup {
+    margin-top: 10px;
 }

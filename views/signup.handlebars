@@ -1,21 +1,33 @@
-    <form class="form signup-form">
-      <div class="form-group">
-        <label for="name-signup">name:</label>
-        <input class="form-input" type="text" id="name-signup" />
-      </div>
-      <div class="form-group">
+<form class="form signup-form">
+    <div class="form-group">
+        <label for="name-signup" class="top">first name:</label>
+        <input class="form-control" type="text" id="name-signup" />
+    </div>
+    <div class="form-group">
+    <label for="lastname-signup">last name:</label>
+    <input class="form-control" type="text" id="name-signup" />
+    </div>
+    <div class="form-group">
         <label for="email-signup">email:</label>
-        <input class="form-input" type="text" id="email-signup" />
-      </div>
-      <div class="form-group">
-        <label for="password-signup">password:</label>
-        <input class="form-input" type="password" id="password-signup" />
-      </div>
-      <div class="form-group">
-        <button class="btn btn-primary" type="submit">sign up</button>
-      </div>
-    </form>
+        <input class="form-control" type="text" id="email-signup" />
+    </div>
+    <div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Birthdate
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
   </div>
 </div>
+    <div class="form-group">
+        <label for="password-signup">password:</label>
+        <input class="form-control" type="password" id="password-signup" />
+    </div>
+    <div class="form-group">
+        <button class="btn btn-primary sign-up-button" type="submit">sign up</button>
+    </div>
+</form>
 
 <script src="./js/login.js"></script>
