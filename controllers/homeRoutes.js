@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { User } = require("../models");
+const { User, Dream } = require("../models");
 const withAuth = require("../utils/auth");
 const zodiac = require('zodiac-signs')();
 
@@ -28,14 +28,26 @@ router.get("/profile", withAuth, async (req, res) => {
     const userData = await User.findByPk(req.session.user_id, {
       attributes: { exclude: ["password"] },
     });
+    const dreamData = await Dream.findAll({
+      where: {
+        user_id: userData.id
+      }
+    })
 
     const user = userData.get({ plain: true });
     const sign = zodiac.getSignByDate({ day: userData.day, month: userData.month })
+    let dreams = []
 
+    for (i = 0; i < dreamData.length; i++) {
+      const aDream = dreamData[i].get({ plain: true })
+      dreams.push(aDream)
+    }
+    console.log(dreams)
     res.render("profile", {
       ...user,
       logged_in: true,
-      ...sign
+      ...sign,
+      ...dreams
     });
   } catch (err) {
     res.status(500).json(err);

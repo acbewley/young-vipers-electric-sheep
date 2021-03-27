@@ -19,6 +19,9 @@ Dream.init(
             type: DataTypes.STRING,
             allowNull: false
         },
+        is_nightmare: {
+            type: DataTypes.BOOLEAN
+        },
         user_id: {
             type: DataTypes.INTEGER,
             references: {
