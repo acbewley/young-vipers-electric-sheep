@@ -1,0 +1,16 @@
+.dream-button {
+    border-right: 1px solid black;
+}
+
+main {
+    background-color: white;
+}
+
+.navbar {
+    background-color:rgb(0, 0, 0); /*whichever you want*/
+    opacity: 0.6; 
+}
+
+.dream-button {
+    background-color: gray;
+}
