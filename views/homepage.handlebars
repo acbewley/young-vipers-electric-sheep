@@ -17,25 +17,27 @@
     <!-- Post Content Column -->
     <div class="col-lg-10">
 
-      <!-- Title -->
+      <!-- Page Title -->
       <h1 class="mt-3">Recent Dreams</h1>
 
       <hr>
 
       <!-- Dream Title -->
-      <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, vero, obcaecati, aut, error
-        quam sapiente nemo saepe quibusdam sit excepturi nam quia corporis eligendi eos magni recusandae laborum minus
-        inventore?</p>
+      {{#each dreams as |dream| }}
+      <p class="lead">
+
+      </p>
 
       <hr>
 
       <!-- Date/Author-->
-      <p>Posted on {{date}} by {{user_name}}</p>
+      <p>Posted on {{format_date created_at}} by {{user_name}}</p>
 
       <hr>
 
       <!-- Dream Content -->
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum
+      {{dream.body}}
+      {{!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum
         rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus, voluptatibus.</p>
 
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, doloribus, dolorem iusto blanditiis unde eius
@@ -46,7 +48,7 @@
 
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, dolor quis. Sunt, ut, explicabo, aliquam
         tenetur ratione tempore quidem voluptates cupiditate voluptas illo saepe quaerat numquam recusandae? Qui,
-        necessitatibus, est!</p>
+        necessitatibus, est!</p> --}}
 
       <hr>
 
@@ -72,4 +74,5 @@
           </div>
         </div> -->
     </div>
+    {{/each}}
     </body>
