@@ -25,11 +25,11 @@ User.init(
       allowNull: true
     },
     day: {
-      type: DataTypes.INTEGER(31),
+      type: DataTypes.INTEGER,
       allowNull: false
     },
     month: {
-      type: DataTypes.INTEGER(12),
+      type: DataTypes.INTEGER,
       allowNull: false
     },
     user_name: {
