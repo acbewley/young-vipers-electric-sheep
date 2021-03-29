@@ -3,15 +3,15 @@
     <form class="form signup-form">
         <div class="form-group">
             <label for="username-signup">username:</label>
-            <input class="form-control" type="text" id="email-signup" />
+            <input class="form-control" type="text" id="username-signup" />
         </div>
         <div class="form-group">
             <label for="name-signup" class="top">first name:</label>
-            <input class="form-control" type="text" id="name-signup" />
+            <input class="form-control" type="text" id="firstname-signup" />
         </div>
         <div class="form-group">
             <label for="lastname-signup">last name:</label>
-            <input class="form-control" type="text" id="name-signup" />
+            <input class="form-control" type="text" id="lastname-signup" />
         </div>
         <div class="form-group">
             <label for="email-signup">email:</label>
@@ -25,7 +25,7 @@
         <div class="form-group day">
             {{!-- <form action="/action_page.php"> --}}
                 <label for="birthdate">Select your birth date:</label>
-                <select>
+                <select id="userdate">
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -63,7 +63,7 @@
         {{!-- <form action="/action_page.php"> --}}
             <div class="form-group month">
                 <label for="birthmonth">Select your birth month:</label>
-                <select>
+                <select id="usermonth">
                     <option value="1">1 - January</option>
                     <option value="2">2 - February</option>
                     <option value="3">3 - March</option>
