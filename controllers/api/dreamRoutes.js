@@ -9,13 +9,6 @@ router.post('/', withAuth, async (req, res) => {
             user_id: req.session.user_id
         });
 
-        const dreams = dreamData.map((post) => post.get({ plain: true }));
-
-        res.render('homepage', {
-            dreams,
-            logged_in: req.session.logged_in,
-          });
-
         res.status(200).json(dreamData);
     } catch (err) {
         res.status(400).json(err)
