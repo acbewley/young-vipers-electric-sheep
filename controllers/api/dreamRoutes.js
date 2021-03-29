@@ -4,19 +4,19 @@ const withAuth = require('../../utils/auth')
 
 router.post('/', withAuth, async (req, res) => {
     try {
-        const newDream = await Dream.create({
+        const dreamData = await Dream.create({
             ...req.body,
             user_id: req.session.user_id
         });
 
-        const dreams = newDream.map((post) => post.get({ plain: true }));
+        const dreams = dreamData.map((post) => post.get({ plain: true }));
 
         res.render('homepage', {
             dreams,
             logged_in: req.session.logged_in,
           });
 
-        res.status(200).json(newDream);
+        res.status(200).json(dreamData);
     } catch (err) {
         res.status(400).json(err)
     };
