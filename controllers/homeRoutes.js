@@ -49,6 +49,15 @@ router.get("/profile", withAuth, async (req, res) => {
   }
 });
 
+router.get('/new-dreams', withAuth, (req, res) => {
+  if (!req.session.logged_in) {
+      res.redirect('/login');
+      return;
+  }
+
+  res.render('new-dreams');
+})
+
 router.get("/login", (req, res) => {
   if (req.session.logged_in) {
     res.redirect("/profile");
