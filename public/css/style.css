@@ -26,7 +26,7 @@ h2 {
     border-left: 1px solid lightgray;
 }
 
-.sign-up-button {
+#sign-up-button {
     margin-top: 15px;
     margin-bottom: 10px;
 }
@@ -36,7 +36,7 @@ h2 {
 }
 
 .signup-form {
-    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .dropdowns {
