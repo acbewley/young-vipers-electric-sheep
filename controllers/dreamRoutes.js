@@ -15,4 +15,31 @@ router.get('/:id', async (req, res) => {
     }
 });
 
+router.get("/new-dreams", withAuth,(req, res) => {
+    Dream.findAll({
+      where: {
+        user_id: req.session.user_id
+      },
+      attributes: [
+        'id',
+        'subject',
+        'body'
+      ],
+      include: [
+        {
+          model: User,
+          attributes: ['user_name', 'sign']
+        }
+      ]
+    })
+    .then(dreamData => {
+      const dreams = dreamData.map(dream = dream.get({ plain: true }));
+      res.render('new-dreams', {dreams, logged_in:true});
+    })
+    .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+    });
+  });
+
 module.exports = router;
