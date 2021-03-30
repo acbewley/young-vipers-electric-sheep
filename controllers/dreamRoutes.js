@@ -15,4 +15,20 @@ router.get('/:id', async (req, res) => {
     }
 });
 
+router.get('/edit/:id', withAuth, (req, res) => {
+    if (!req.session.logged_in) {
+        res.redirect('/login');
+        return;
+    }
+
+    try {
+        const dreamData = Dream.findByPk(req.params.id)
+        res.render('edit-dreams', {
+            ...dreamData
+        });
+    } catch (err) {
+        res.status(500).json(err);
+    }
+})
+
 module.exports = router;
