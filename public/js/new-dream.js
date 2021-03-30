@@ -3,12 +3,14 @@ async function newFormHandler(e) {
 
     const subject = document.querySelector('input[name="subject"]').value;
     const body = document.querySelector('textarea[name="body"]').value;
+    const is_nightmare = document.querySelector('.form-check-input').checked;
 
-    const response = await fetch('api/dream', {
+    const response = await fetch('/api/dreams', {
         method: 'POST',
         body: JSON.stringify({
             subject,
-            body
+            body,
+            is_nightmare
         }),
         headers: {
             'Content-Type': 'application/json'
