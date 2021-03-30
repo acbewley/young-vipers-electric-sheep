@@ -43,7 +43,7 @@ router.get("/profile", withAuth, async (req, res) => {
     const user = userData.get({ plain: true });
     const sign = zodiac.getSignByDate({ day: userData.day, month: userData.month })
     const dreams = dreamData.map((dream) => dream.get({ plain: true }));
-    
+
     res.render("profile", {
       ...user,
       logged_in: true,
@@ -57,8 +57,8 @@ router.get("/profile", withAuth, async (req, res) => {
 
 router.get('/new-dreams', withAuth, (req, res) => {
   if (!req.session.logged_in) {
-      res.redirect('/login');
-      return;
+    res.redirect('/login');
+    return;
   }
 
   res.render('new-dreams');
