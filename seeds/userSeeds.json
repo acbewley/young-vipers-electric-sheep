@@ -7,5 +7,14 @@
         "user_name": "acbewley",
         "email": "acbewley13@gmail.com",
         "password": "test1234"
+    },
+    {
+        "first_name": "Heather",
+        "last_name": "Smith",
+        "day": 17,
+        "month": 6,
+        "user_name": "halexsmith",
+        "email": "halexsmith86@gmail.com",
+        "password": "password"
     }
 ]
