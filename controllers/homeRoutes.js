@@ -5,8 +5,14 @@ const zodiac = require('zodiac-signs')();
 
 router.get("/", async (req, res) => {
   try {
+    const dreamData = await Dream.findAll({
+      include: [{ model: User }]
+    });
+    const dreams = dreamData.map((dream) => dream.get({ plain: true }));
+    console.log(dreams)
     res.render("homepage", {
       logged_in: req.session.logged_in,
+      dreams
     });
   } catch (err) {
     res.status(500).json(err);
