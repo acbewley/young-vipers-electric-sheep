@@ -1,0 +1,26 @@
+<div>
+    <a href="/">  Back to Home</a>
+    <h2 class="title">Edit Dream</h2>
+    <br/>
+    <form class="edit-dream-form">
+        <div class="form-group">
+            <label for="post-title">Subject:</label>
+            <input class="form-control" name="subject" type="text" id="subject" value="{{dream.subject}}">
+        </div>
+        <div class="form-group">
+            <label for="body">Body:</label>
+            <textarea class="form-control" name="body" type="text" id="body" rows="10" value="{{dream.body}}"></textarea>
+        </div>
+        <div class="form-group">
+            <label class="form-check-label" for="nightmare">Was this a nightmare?:</label>
+            <input type="checkbox" class="form-check-input" name="nightmare" id="nightmare"></input>
+        </div>
+            {{!-- Conjured by you on {{format_date dream.createdAt}} --}}
+
+            <button type="submit" class="btn btn-success">Save Dream</button>
+            <button type="button" class="btn btn-danger delete-dream-btn">Delete Dream</button>
+    </form>
+</div>
+
+<script src="/js/edit-dream.js"></script>
+<script src="/js/delete-dream.js"></script>

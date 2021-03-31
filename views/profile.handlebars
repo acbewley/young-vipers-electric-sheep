@@ -8,6 +8,7 @@
     <p style="font-style: italic">{{dream.subject}}</p>
     Posted {{format_date dream.createdAt}}
     <p class="dream-body">{{dream.body}}</p>
+    <a class="btn btn-info" href="/dreams/edit/{{dream.id}}">Edit Dream</a>
     <hr>
     {{/each}}
   </div>
