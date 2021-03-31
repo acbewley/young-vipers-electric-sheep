@@ -3,6 +3,8 @@
     <h2>Welcome, {{user_name}}!</h2>
     {{#each dreams as |dream|}}
     <p>{{dream.body}}</p>
+    <a class="btn btn-info" href="/dreams/edit/{{dream.id}}">Edit Dream</a>
+    <br>
     {{/each}}
   </div>
 </div>
