@@ -7,41 +7,34 @@
 </head>
 
 <!-- Page Content -->
-<div class="container-fluid">
+<div class="container">
   <div class="row">
     <!-- New Post Button  -->
     {{#if logged_in}}
-    <div class="col-lg-2 dream-button">
+    <div class="col-sm-2 sidenav">
       <a type="button" class="btn btn-primary" style="color: white; background-color: #5b88ae;" href="/new-dreams">+ New Dream</a>
+      {{/if}}
     </div>
-    </div>
-    {{/if}}
-    <!-- Post Content Column -->
-    <div class="col-lg-10">
 
-      <!-- Page Title -->
-      <h1 class="mt-3">Recent Dreams</h1>
+  <!-- Post Content Column -->
+  <div class="col-sm-9">
 
-      <hr>
+    <!-- Dream Title -->
+    {{#each dreams as |dream| }}
+    <p class="lead">
+      {{dream.subject}}
+    </p>
 
-      <!-- Dream Title -->
-      {{#each dreams as |dream| }}
-      <p class="lead">
-        {{dream.subject}}
-      </p>
+    <!-- Date/Author-->
+     <p><em>Posted on {{format_date dream.createdAt}} by <b>{{user.user_name}}</em></b></p>
 
-      <!-- Date/Author-->
-        Posted on {{format_date dream.createdAt}} by {{user.user_name}}</p>
+    <!-- Dream Content -->
+    {{dream.body}}
 
-      <hr>
+    <hr>
 
-      <!-- Dream Content -->
-      {{dream.body}}
-
-      <hr>
-
-      <!-- Comments Form -- Might not use this stuff -->
-      <!-- <div class="card my-4">
+    <!-- Comments Form -- Might not use this stuff -->
+    <!-- <div class="card my-4">
           <h5 class="card-header">Leave a Comment:</h5>
           <div class="card-body">
             <form>
@@ -53,15 +46,13 @@
           </div>
         </div> -->
 
-      <!-- Single Comment -->
-      <!-- <div class="media mb-4">
+    <!-- Single Comment -->
+    <!-- <div class="media mb-4">
           <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">
           <div class="media-body">
             <h5 class="mt-0">Commenter Name</h5>
             Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
           </div>
         </div> -->
-    </div>
-    {{/each}}
-    
-    </body>
+  {{/each}}
+  </body>
