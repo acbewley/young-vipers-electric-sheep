@@ -73,4 +73,21 @@ router.get("/login", (req, res) => {
   res.render("login");
 });
 
+router.get('/:id', withAuth, async (req, res) => {
+  if (!req.session.logged_in) {
+    res.redirect('/login')
+  }
+
+  try {
+      const dreamData = await Dream.findByPk(req.params.id)
+      const dream = dreamData.get({ plain: true });
+
+      res.render('edit-dreams', {
+          ...dream
+      })
+  } catch (err) {
+      res.status(500).json(err);
+  }
+});
+
 module.exports = router;
