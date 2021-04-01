@@ -100,3 +100,8 @@ form {
 .blurb {
     padding-bottom: 5px;
 }
+
+#nightmare {
+    color: red;
+    float: right;
+}
