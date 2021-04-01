@@ -9,15 +9,24 @@
 <!-- Page Content -->
 <div class="container">
   <div class="row">
-    <!-- New Post Button  -->
+
+    <!-- New Dream Button (only visible to logged in users) -->
     {{#if logged_in}}
     <div class="col-sm-2 sidenav">
-      <a type="button" class="btn btn-primary" style="color: white; background-color: #5b88ae;" href="/new-dreams">+ New Dream</a>
+      <a type="button" class="btn btn-primary" style="color: white; background-color: #5b88ae;" href="/new-dreams" id="new-dream">+ New Dream</a>
       {{/if}}
     </div>
 
   <!-- Post Content Column -->
   <div class="col-sm-9">
+
+    <!-- Blurb (only visible to users who are not logged in) -->
+
+    <div class="blurb">
+      <h4>Welcome to Electric Sheep!</h4>
+      This blog is for keeping track of your dreams.
+    </div>
+
 
   <!-- Recent Dreams Image -->
   <div id="recent-img">
