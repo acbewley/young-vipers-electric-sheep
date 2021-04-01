@@ -1,4 +1,4 @@
-main {
+.container {
     background-color: white;
 }
 
@@ -10,7 +10,7 @@ main {
 .welcome {
     color: rgb(0, 0, 0);
     background-color: #d3e6ec;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid gray;
     margin-bottom: 10px;
 }
 
@@ -20,6 +20,13 @@ main {
 
 .dream-body {
     margin-top: 10px;
+}
+
+.profile-body {
+    background-color: white;
+    padding-top: 3px;
+    color: black;
+    padding-left: 3px;
 }
 
 h2 {
@@ -62,3 +69,27 @@ h2 {
     background-color: #d3e6ec;
     padding-left: 5px;
 }
+
+#recent-img {
+    background-color: #5b88ae;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 3px;
+}
+
+#here {
+    color: #5b88ae;
+}
+
+.btn-info {
+    margin-left: 5px;
+}
+
+form {
+    padding-bottom: 10px;
+}
+
+.edit-button {
+    margin-bottom: 5px;
+}
+
