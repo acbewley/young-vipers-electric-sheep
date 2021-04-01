@@ -6,9 +6,21 @@
         "user_id": 1
     },
     {
+        "subject": "Chocolate Fondue",
+        "body": "Last night I dreamed that we all finished the bootcamp and celebrated with a chocolate fountain.",
+        "is_nightmare": false,
+        "user_id": 2
+    },
+    {
         "subject": "my chill dream",
         "body": "I dreamt that I was listening to chill beats to relax/study to",
         "is_nightmare": false,
         "user_id": 1
+    },
+    {
+        "subject": "Wallpaper",
+        "body": "I dreamt that while I was at work, someone had broken into my apartment and given every room orange wallpaper.",
+        "is_nightmare": true,
+        "user_id": 2
     }
 ]
