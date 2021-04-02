@@ -37,6 +37,7 @@
     {{#each dreams as |dream| }}
     <p class="lead">
       {{dream.subject}}
+      <b id="nightmare"> {{#if dream.is_nightmare}}WARNING!! NIGHTMARE!!{{/if}}</b>
     </p>
 
     <!-- Date/Author-->
