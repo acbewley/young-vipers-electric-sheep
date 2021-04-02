@@ -8,7 +8,7 @@ router.get("/", async (req, res) => {
     const dreamData = await Dream.findAll({
       include: [{ model: User }]
     });
-    const dreams = dreamData.map((dream) => dream.get({ plain: true }));
+    const dreams = dreamData.reverse().map((dream) => dream.get({ plain: true }));
     console.log(dreams)
     res.render("homepage", {
       logged_in: req.session.logged_in,
@@ -42,12 +42,12 @@ router.get("/profile", withAuth, async (req, res) => {
 
     const user = userData.get({ plain: true });
     const sign = zodiac.getSignByDate({ day: userData.day, month: userData.month })
-    const dreams = dreamData.map((dream) => dream.get({ plain: true }));
-
+    const dreams = dreamData.reverse().map((dream) => dream.get({ plain: true }));
+    console.log(sign)
     res.render("profile", {
       ...user,
       logged_in: true,
-      ...sign,
+      sign,
       dreams
     });
   } catch (err) {
