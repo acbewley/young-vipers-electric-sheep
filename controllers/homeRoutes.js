@@ -83,7 +83,7 @@ router.get('/:id', withAuth, async (req, res) => {
       const dream = dreamData.get({ plain: true });
 
       res.render('edit-dreams', {
-          ...dream
+          dream
       })
   } catch (err) {
       res.status(500).json(err);
